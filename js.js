@@ -3,22 +3,33 @@ const submit = document.querySelector('.submit');
 const texfAfterRate = document.querySelector('.rated');
 const box1 = document.querySelector('.box');
 const box2 = document.querySelector('.box2');
-console.log(box1);
-console.log(box2);
+const hidee = document.querySelector('.hidee');
+const error = document.querySelector('.error');
+
+
 const clicked = (e) => {
-    const but = e.target;
-    // console.log(but.textContent);
-    const yourRate = but.textContent;
+	const but = e.target;
+	const yourRate = but.textContent;
+    error.textContent = '';
+	texfAfterRate.textContent = `You selected ${yourRate} out of 5`;
+	hidee.textContent = yourRate;
+};
 
-    texfAfterRate.textContent = `You selected ${yourRate} out of 5`;
-    
-}
-const submited = () => {
-    
-    box1.classList.add('hide');
-    box2.classList.remove('hide');
-    clicked(e)
+const show = () => {
+	box1.classList.add('hide');
+	box2.classList.remove('hide');
+	clicked();
+};
 
-}
-rates.forEach(rate => rate.addEventListener('click',clicked));
-submit.addEventListener('click',submited)
+const check = () => {
+	if (hidee.textContent === '') {
+        error.style.color = 'red';
+        error.textContent = 'You have to chose rate!';
+	} else {
+		show();
+	}
+};
+
+
+rates.forEach((rate) => rate.addEventListener('click', clicked));
+submit.addEventListener('click', check);

@@ -41,6 +41,12 @@ body {
 	flex-direction: column;
     justify-content: center;
 }
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+height: 95vh;
+}
 
 .star {
 	background-color: var(--vDarkBlue);
@@ -71,7 +77,7 @@ width: 30px;
     font-weight: 700;
 }
 .mid{
-    padding: 25px;
+    padding: 25px 25px 10px 25px;
 }
 .mid p{
     color: var(--mediumGrey);
@@ -114,6 +120,7 @@ width: 30px;
     cursor: pointer;
     transition: 0.4s;
     font-weight: 700;
+    border: none;
 }
 
 .submit:hover{
@@ -190,4 +197,15 @@ color: var(--white);
 
 .box2{
     align-items: center;
+}
+.error{
+    margin-top: 10px;
+    text-align: center;
+}
+
+@media (max-width:410px){
+    .box{
+        width: 350px;
+        
+    }
 }
