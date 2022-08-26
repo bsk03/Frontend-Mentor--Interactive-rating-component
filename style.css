@@ -25,7 +25,13 @@ body {
 }
 
 /* box */
-
+/* .wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vw;
+} */
 .box {
 	background-color: var(--darkBlue);
 	height: 420px;
@@ -33,6 +39,7 @@ body {
 	border-radius: 30px;
 	display: flex;
 	flex-direction: column;
+    justify-content: center;
 }
 
 .star {
@@ -141,7 +148,46 @@ transition: 0.4s;
     background-color: var(--lightGrey);
     color: white;
 }
-.chosen{
+.rateBtn:focus{
 background-color: var(--mediumGrey);
 color: var(--white);
+}
+
+/* after */
+.orange p {
+    color: var(--orange);
+}
+.orange{
+    background-color: var(--vDarkBlue);
+    height: 35px;
+    padding: 10px;
+    border-radius: 40px;
+    margin-top: 20px;
+}
+.texts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+.texts h1{
+    font-size:30px ;
+    color: var(--white);
+    padding-bottom: 15px;
+}
+.texts p{
+    color: var(--lightGrey);
+    font-weight: 700;
+    padding: 10px;
+    text-align: center;
+    line-height: 25px;
+}
+
+.hide{
+    display: none;
+}
+
+.box2{
+    align-items: center;
 }
